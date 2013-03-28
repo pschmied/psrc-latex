@@ -1,0 +1,27 @@
+% Support letter for Electric Vehicle workshop
+\documentclass[letterpaper,11pt]{letter}
+\usepackage{psrc-letter}
+\usepackage{lipsum}
+
+\name{Peter Schmiedeskamp} % To be used for the return address on the envelope
+\signature{Peter Schmiedeskamp\\Associate Planner\\Puget Sound Regional Council} % Goes after the closing (ie at the end of the letter, with space for a signature)
+
+% Alternatively, these may be set on an individual basis within each letter environment.
+
+%\makelabels % this command prints envelope labels on the final page of the document
+
+\begin{document}
+\begin{letter}{RecipientName \\ Address1 \\ Address2 \\ Address3}
+
+\opening{Dear RecipientName:}
+
+\lipsum[1-2]
+
+\closing{Sincerely,} % eg Regards,
+
+%\cc{} % people this letter is cc-ed to
+%\encl{} % list of anything enclosed
+%\ps{} % any post scriptums. ``PS'' labels must be put in manually
+
+\end{letter}
+\end{document}

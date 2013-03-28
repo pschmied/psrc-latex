@@ -1,0 +1,97 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%! program = pdflatex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                %
+%   A sample report using the psrc.sty package   %
+%                                                %
+%                                                %
+%          All PSRC LaTeX queries to:            %
+%           pschmiedeskamp@psrc.org              %
+%                                                %
+%                                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%% DOCUMENT SETUP %%%%%
+% Document class derives from "memoir" class
+\documentclass[10pt, letterpaper, final, twoside, onecolumn, article]{memoir}% For most reports; chapters look like section headers
+%\documentclass[10pt, letterpaper, final, twoside, onecolumn]{memoir}% For book-like reports with separate chapters
+
+% Useful packages
+\usepackage{psrc}
+\usepackage{lipsum}
+\usepackage{soul}
+%\usepackage[notes,strict,backend=bibtex8,babel=other,bibencoding=inputenc,doi=false,isbn=false,url=false]{biblatex-chicago}% Chicago bibliography
+
+
+\title{A short and descriptive title}
+\author{Ronald Reportwriter}
+\date{June 2015}
+
+%\bibliography{PSRC} %Wouldn't a curated, agency-wide bibliography database be swell?
+
+\begin{document}
+\maketitle
+
+%%%%% BEGIN DOCUMENT %%%%%
+
+\frontmatter
+\tableofcontents* %Starred version omits the section from the ToC
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+\clearpage
+
+
+\chapter{Executive Summary}
+\lipsum[1-5]
+
+
+\mainmatter
+\chapter{Introduction}
+\lipsum[1-2]
+
+\begin{table}[htdp]
+\footnotesize % I find a little smaller table text to be nice.
+\caption{A table with its heading properly placed at the top}
+\begin{center}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+1.5 cm & Automatic width column & Other auto-width column \\
+\midrule
+Spam & Tables should not have lots of horizontal and vertical lines. Tables that look like a grid look amateurish. Let the whitespace and contents be your guide. & What sagely advice!\\
+
+Eggs & This is a larger portion of text that will be wrapped automatically within the confines of the table cell & A short bit of text. \\
+
+\bottomrule
+\end{tabularx}
+\end{center}
+\label{tb:ex1}
+\end{table}%
+
+
+\section{Subheading}
+\lipsum[4]
+
+\subsection{Sub-subheading}
+Do you \emph{really} need this level of nesting? As Edward Tufte points out, Richard Feynman managed to write clearly and engagingly for several volumes of physics texts and only used chapter and section heads. Remember: you're writing a report, not an outline.
+
+\lipsum[7]
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{figures/example1}
+
+
+\caption{Figure with caption properly placed at the bottom}
+\label{fig:ex1}
+\end{center}
+\end{figure}
+
+
+
+\end{document}

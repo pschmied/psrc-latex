@@ -1,0 +1,40 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%! program = pdflatex
+
+
+%% Very basic example. No logo. Otherwise same semantics as report class. Someday...
+
+
+%%%%% DOCUMENT SETUP %%%%%
+% Document class derives from "memoir" class
+\documentclass[10pt, letterpaper, final, twoside, onecolumn, article]{memoir}% For most reports; chapters look like section headers
+%\documentclass[10pt, letterpaper, final, twoside, onecolumn]{memoir}% For book-like reports with separate chapters
+
+% Useful packages
+\usepackage{psrc-memo}
+\usepackage{lipsum}
+\usepackage{soul}
+%\usepackage[notes,strict,backend=bibtex8,babel=other,bibencoding=inputenc,doi=false,isbn=false,url=false]{biblatex-chicago}% Chicago bibliography
+
+
+%\bibliography{PSRC} %Wouldn't a curated, agency-wide bibliography database be swell?
+
+\begin{document}
+
+\par\noindent\textbf{To:} Recipient
+
+\par\noindent\textbf{From:} Sender
+
+\par\noindent\textbf{Subject:} MySubject
+
+\par\noindent\textbf{Date:} \today % Today's date, or type your own
+
+\vspace{.5pc}
+\hrule
+\vspace{3pc}
+
+\lipsum[1-2]
+
+
+\end{document}
